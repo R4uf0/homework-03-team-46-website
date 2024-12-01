@@ -1,0 +1,686 @@
+/* Import section */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --ada-blue: #336178;
+    --ada-red: #ae485e;
+    --dark-blue: #181c3c
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: "Parkinsans", sans-serif;
+}
+
+/* Navigation Bar Styling */
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ada-blue);
+    color: white;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.184);
+    z-index: 10;
+    transition:0.3s;
+}
+
+.navbar-small {
+    height: 70px;
+    padding: 0 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-small .nav-team-name a {
+    font-size: 1.5rem;
+}
+
+.navbar-small ul>li {
+    font-size: 16px;
+}
+
+/* Styling for UL and LI */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+nav ul>li {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    padding-right: 15px;
+}
+
+/* Styling for Logo */
+nav ul>li img {
+    height: 70px;
+    width: auto;
+    padding-left: 15px;
+}
+
+/* Hover Effects for Links */
+nav ul>li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 650;
+    font-family: "Montserrat", serif;
+    position: relative;
+}
+
+nav .nav-text>li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--ada-red);
+    transition: width 0.3s;
+}
+
+.nav-team-name a {
+    font-size: 2rem;
+    color: rgb(178, 34, 34);
+    /* color: rgb(41, 178, 34,); */
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-radius: 5px;
+}
+
+.nav-team-name a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(178, 34, 34);
+    border: rgba(0, 0, 0, 0.8) 2px solid;
+}
+
+nav .nav-text>li a:hover::after {
+    width: 100%;
+}
+
+nav .nav-text>li a:hover {
+    color: var(--ada-red);
+    transition: color 0.3s;
+}
+
+section,
+header {
+    padding-top: 150px;
+}
+
+.team-section {
+    margin: auto;
+    text-align: center;
+    background-color: rgba(245, 245, 240, 0.546);
+    padding: 0 0 80px;
+}
+
+.team-section h2 {
+    font-size: 4rem;
+    padding-top: 30px;
+    color: var(--dark-blue);
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 700;
+}
+
+header {
+    background-color: rgba(245, 245, 240, 0.546);
+    padding-bottom: 80px;
+}
+
+.header-home {
+    padding-top: 250px;
+    margin: auto;
+    text-align: center;
+    background: url("https://www.ada.edu.az/assets/img/header/header-img-campus.jpg");
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.header-home span {
+    color: rgb(178, 34, 34);
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.573);
+}
+
+.header-home h6 {
+    font-size: 3rem;
+    padding-bottom: 15px;
+    color: #ffffff;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+}
+
+.header-text {
+    width: 70%;
+    margin: auto;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-text h1 {
+    font-size: 3.3rem;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #ae485e;
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+.header-text p {
+    width: 60%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.team-section .card {
+    max-width: 350px;
+    border-radius: 0.5rem;
+    height: 410px;
+    background-color: rgba(220, 220, 220, 0.884);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+}
+
+.team-section .card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-section .content {
+    padding: 1.1rem;
+}
+
+.team-section .card-box {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.team-section .image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.team-section .title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.team-section .desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.team-section button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: rgba(39, 174, 96, 0.15) 0px 4px 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team-section a {
+    color: #fff;
+}
+
+.team-section button:hover {
+    background-color: #2ecc71;
+    box-shadow: rgba(39, 174, 96, 0.4) 0px 6px 12px;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.header-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.line {
+    width: 90px;
+    height: 3px;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+}
+
+.star {
+    font-size: 3rem;
+    color: var(--dark-blue);
+    margin-top: -10px;
+}
+
+.light .line {
+    background-color: white;
+}
+
+.light .star {
+    color: white;
+}
+
+.container-foot {
+    background-color: var(--dark-blue);
+    width: 100%;
+    padding-top: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item {
+    width: fit-content;
+    text-align: left;
+}
+
+.item h5 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.contact-pair {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-pair i {
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.contact-pair p {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.4;
+    font-family: "Poppins", sans-serif;
+}
+
+.sosial-pair i {
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.container-members-info {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 70%;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    font-size: 3rem;
+    padding-top: 30px;
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 700;
+    margin: auto;
+    text-align: center;
+}
+
+.s-red {
+    color: var(--dark-blue);
+}
+
+.l-red {
+    background-color: var(--dark-blue);
+}
+
+.container-members-info .member-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-members-info .member-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.container-members-info .member-item img:hover {
+    transform: scale(1.04);
+}
+
+.container-members-info .text-box {
+    background-color: rgba(220, 220, 220, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+
+}
+
+.container-members-info .text-box:hover {
+    transform: scale(1.03);
+}
+
+.container-members-info .text-box h3 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--ada-red);
+}
+
+.hour-section {
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 245, 240, 0.546);
+}
+
+.hour-section .hour-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+.hour-section .video {
+    flex: 1.5;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.hour-img-section {
+    background-color: var(--dark-blue);
+    padding: 0 0 90px 0;
+}
+
+.hour-img-section h2 {
+    color: white;
+    font-size: 4rem;
+    padding-top: 30px;
+}
+
+.hour-img {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+    width: 85%;
+}
+
+.hour-img img {
+    flex: 1;
+    max-width: 33%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.hour-img img:hover {
+    transform: scale(1.05);
+}
+
+.hour-section .text-box {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.hour-section .text-box h4 {
+    font-size: 2.5rem;
+    color: var(--ada-red);
+    margin-bottom: 15px;
+}
+
+.hour-section .text-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #393232;
+}
+
+.web-project-section {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 88%;
+    margin: auto;
+    list-style-type: circle;
+}
+
+.web-project-section>div {
+    border: var(--ada-red) 2.5px solid;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.web-project-section > div:hover {
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+
+.web-project-section>div h4 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--ada-red);
+}
+
+.web-project-section>div p {
+    color: var(--ada-blue);
+    line-height: 1.6;
+}
+
+.cont-table-container {
+    margin: 20px auto;
+    width: 88%;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    border-collapse: collapse;
+    padding-top: 60px;
+}
+
+.cont-table-container h2 {
+    padding-bottom: 40px;
+}
+
+.cont-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.cont-table-container th,
+.cont-table-container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.cont-table-container th,
+.cont-table-container a {
+    background-color: #336178;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cont-table-container tr:nth-child(even) {
+    background-color: #3361781f;
+}
+
+.cont-table-container td {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.white {
+    background-color: white;
+    color: var(--dark-blue);
+}
+
+.white i,
+.white a,
+.white p {
+    color: #111827;
+}
+
+.feature-section {
+    padding: 40px 0;
+    background-color: var(--dark-blue);
+}
+
+.feature-dictionary-dict {
+    background-color: rgba(245, 245, 240, 0.85);
+    padding: 60px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 80%;
+    font-family: 'Lato', sans-serif;
+}
+
+.feature-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+dt {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--ada-blue);
+    padding: 10px 0;
+    border-bottom: 2px solid var(--ada-red);
+}
+
+dt strong {
+    font-size: 1.5rem;
+    color: var(--ada-red);
+}
+
+dd {
+    font-size: 1.125rem;
+    padding-left: 20px;
+    background-color: rgba(220, 220, 220, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+dd:hover {
+    background-color: rgba(234, 232, 232, 0.959);
+    transition: background-color 0.3s;
+}
+
+dl dt,
+dl dd {
+    transition:0.3s;
+}
+
+dl dt:hover {
+    color: var(--ada-red);
+}
+
+dl dd:hover {
+    color: var(--dark-blue);
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.art-section #artCanvas{
+    width: 100%;
+}
+
+/* Animation */
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
